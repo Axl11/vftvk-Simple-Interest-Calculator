@@ -1,4 +1,29 @@
-body {background-color:tan;}
-h1{color:green;}
+/* body class is linked with the body tag in the html file */
+body {
+    background-color:black;
+    font-family:arial;
+    color:white;
+}
+
+/* h1 class is linked with the h1 tag in the html file */
+h1{
+    color:grey;
+    font-family:verdana;
+}
+
+/* .maindiv class is linked with the div tag of the maindiv class in the html file */
+.maindiv {
+    background-color: white;
+    color: black;
+    width: 500px;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.secondarydiv {
+    padding: 0px 80px;
+    text-align: justify;
+}
 
 
