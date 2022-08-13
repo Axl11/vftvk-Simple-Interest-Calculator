@@ -1,6 +1,6 @@
 //compute() function processes all data that user types and send the interest according to the values.
 function compute()
-{
+{ 
     //Get the reference to the element named "principal" inside the principal variable
     var principal = document.getElementById("principal").value;
     //Get the reference to the element named "rate" inside the rate variable
@@ -11,11 +11,15 @@ function compute()
     var interest = principal * years * rate /100;
     //Store the actual year plus the years assigned by user
     var year = new Date().getFullYear()+parseInt(years);
-
-    //Sets the HTML content of the element named "result"
-    document.getElementById("result").innerHTML="If you deposit "+principal+",\<br\>at an interest rate of "+rate+"%.\<br\>You will receive an amount of "+interest+",\<br\>in the year "+year+"\<br\>\<br\>"
-    //checkdata() function is called to execute what it contains
-    checkdata();
+    
+    if(principal <= 0) {
+        //checkdata() function is called to execute what it contains
+        checkdata();
+    }
+    else {
+        //Sets the HTML content of the element named "result"
+        document.getElementById("result").innerHTML="If you deposit "+principal+",\<br\>at an interest rate of "+rate+"%.\<br\>You will receive an amount of "+interest+",\<br\>in the year "+year+"\<br\>\<br\>"
+    }
 }
 
 //updateRaye() function update the rate value according to the slider
